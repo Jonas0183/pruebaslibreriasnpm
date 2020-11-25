@@ -1,0 +1,22 @@
+$font-stack: 12pt "Goldman", cursive;
+
+#cont {
+  width: 100%;
+  max-width: 1200px;
+  box-sizing: content-box;
+  margin-top: 5px;
+  display: block;
+  margin: 0 auto;
+  background-color: #887d7d;
+}
+#header {
+  display: flex;
+  background-color: black;
+  text-decoration: none;
+  font: $font-stack;
+  color: darkgray;
+  line-height: 12px;
+  padding-right: 5px;
+  padding-top: 5px;
+  padding-bottom: 2px;
+}
