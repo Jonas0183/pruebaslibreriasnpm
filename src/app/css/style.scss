@@ -11,12 +11,18 @@ $font-stack: 12pt "Goldman", cursive;
 }
 #header {
   display: flex;
-  background-color: black;
+  background-color: dimgrey;
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+}
+.element-header {
   text-decoration: none;
   font: $font-stack;
-  color: darkgray;
+  font-size: 2em;
+  color: black;
   line-height: 12px;
-  padding-right: 5px;
+  padding-left: 20px;
   padding-top: 5px;
   padding-bottom: 2px;
 }

@@ -22,7 +22,7 @@ module.exports = {
                 loader: 'babel-loader'
             },
             {
-                test: /\.(gif|png|jpe?g|sgv)$/i,
+                test: /\.(gif|png|jpe?g|svg)$/i,
                 exclude: /node_modules/,
                 use: [
                   {
@@ -71,18 +71,6 @@ module.exports = {
 
         new HtmlWebpackPlugin({
             template: './src/index.html',
-            minify : {
-                collapseWhitespace: true,
-                removeComments: true,
-                removeRedundantAttributes: true,
-                removeScriptTypeAttributes: true,
-                removeStyleLinkTypeAttributes: true,
-                useShortDoctype: true
-            }
-        }),
-        new HtmlWebpackPlugin({
-            template: './src/addNew.html',
-            filename : 'addNew.html',
             minify : {
                 collapseWhitespace: true,
                 removeComments: true,
