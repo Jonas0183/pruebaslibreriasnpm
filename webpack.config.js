@@ -37,7 +37,6 @@ module.exports = {
               },
             {                       
                 test: /\.scss$/,
-                exclude: /node_modules/,
                 use: [
                     {
                         loader: 'style-loader',
@@ -67,6 +66,7 @@ module.exports = {
     plugins : [
         new MiniCssExtractPlugin({
             filename: 'css/style.scss',
+            filename: 'jedlislider/src-webpack/jedlislider.scss'
           }),
 
         new HtmlWebpackPlugin({
