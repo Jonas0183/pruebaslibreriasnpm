@@ -1,17 +1,18 @@
 $font-stack: 12pt "Goldman", cursive;
 
 #cont {
+  height: 900px;
   width: 100%;
   max-width: 1200px;
   box-sizing: content-box;
   margin-top: 5px;
   display: block;
   margin: 0 auto;
-  background-color: #887d7d;
+  background-color: #e0d2d2;
 }
 #header {
   display: flex;
-  background-color: dimgrey;
+  background-color: #dacfcf;
   flex-wrap: wrap;
   display: flex;
   align-items: center;
@@ -25,4 +26,9 @@ $font-stack: 12pt "Goldman", cursive;
   padding-left: 20px;
   padding-top: 5px;
   padding-bottom: 2px;
+}
+p {
+  font: $font-stack;
+  padding-left: 25px;
+  padding-right: 25px;
 }

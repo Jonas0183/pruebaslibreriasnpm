@@ -18,12 +18,16 @@ module.exports = {
         rules : [
             {
                 test :  /\.js$/,
-                exclude: /node_modules/,
+                include: [
+                    path.resolve(__dirname, "src"),
+                  ],
                 loader: 'babel-loader'
             },
             {
                 test: /\.(gif|png|jpe?g|svg)$/i,
-                exclude: /node_modules/,
+                include: [
+                    path.resolve(__dirname, "src")
+                ],
                 use: [
                   {
                     loader: 'file-loader',
@@ -57,7 +61,9 @@ module.exports = {
             },
             {
                 test: /\.html$/,
-                exclude: /node_modules/,
+                include: [
+                    path.resolve(__dirname, "src")
+                ],
                 use: "html-loader"
             }
         ]
@@ -71,6 +77,18 @@ module.exports = {
 
         new HtmlWebpackPlugin({
             template: './src/index.html',
+            minify : {
+                collapseWhitespace: true,
+                removeComments: true,
+                removeRedundantAttributes: true,
+                removeScriptTypeAttributes: true,
+                removeStyleLinkTypeAttributes: true,
+                useShortDoctype: true
+            }
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/learnMore.html',
+            filename : 'learnMore.html',
             minify : {
                 collapseWhitespace: true,
                 removeComments: true,
